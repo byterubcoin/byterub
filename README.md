@@ -1,6 +1,6 @@
 ![Build check]((https://github.com/byterubcoin/byterub/workflows/Build%20check/badge.svg))
 
-BTR is people's electronic cash, a cryptocurrency, just like Bitcoin but Ukrainian and anonymous thanks to Cryptonote technology. The key principle of CryptoNote is adaptive parameters. BTR already has adaptive block size limit and adaptive difficulty, which we improved, and which ensures it's stable emission rate and thus makes BTR sound money. In addition in BTR was implemented adaptive fee to keep transaction costs stable regardless of btr price.
+ByteRub is people's electronic cash, a cryptocurrency, just like Bitcoin but Russian and anonymous thanks to Cryptonote technology. The key principle of CryptoNote is adaptive parameters. BTR already has adaptive block size limit and adaptive difficulty, which we improved, and which ensures it's stable emission rate and thus makes BTR sound money. In addition in BTR was implemented adaptive fee to keep transaction costs stable regardless of btr price.
 
 **HARDFORK V4 IS SET AT HEIGHT 266000!!!** In this hardfork _we introduce adaptive minimal transaction fee_ as first step towards our goal. Information for exchanges and other services how to work with new fees: https://github.com/byterubcoin/byterub/wiki/Dynamic-transaction-minimum-fee
 

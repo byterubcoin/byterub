@@ -1,13 +1,13 @@
 // Copyright (c) 2017-2018, BTR developers
 /*!
- *  file Ukrainian.h
+ *  file Russian.h
  *
  *  Created by ByteRub contributor Lastik, edited by Aiwe
- *  Based on 'Frequency list of Ukrainian language' by Volodymyr Vlad
+ *  Based on 'Frequency list of Russian language' by Volodymyr Vlad
  *  This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.
  *  Copyright © 2013 Volodymyr Vlad
  *
- *  brief Ukrainian word list.
+ *  brief Russian word list.
  */
 
 #pragma once
@@ -19,12 +19,12 @@
 
 namespace Language {
 
-class Ukrainian : public Base
+class Russian : public Base
 {
 public:
 	const static std::string c_name;
 
-	Ukrainian() : Base(c_name, std::vector<std::string>({
+	Russian() : Base(c_name, std::vector<std::string>({
 		"абат",
 		"абощо",
 		"абсурд",

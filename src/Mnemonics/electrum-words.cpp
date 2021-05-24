@@ -64,13 +64,13 @@
 #include "japanese.h"
 #include "polish.h"
 #include "russian.h"
-#include "ukrainian.h"
+#include "Russian.h"
 #include "language_base.h"
 
 namespace Language {
 
 const std::string English   ::c_name = "English";
-const std::string Ukrainian ::c_name = "українська мова";
+const std::string Russian ::c_name = "українська мова";
 const std::string Polish    ::c_name = "język polski";
 const std::string German    ::c_name = "Deutsch";
 const std::string French    ::c_name = "Français";
@@ -86,7 +86,7 @@ typedef std::unordered_map<std::string, Lazy<std::shared_ptr<Base>>> LanguageMap
 const static LanguageMap c_languageMap =
 {
 	{ English   ::c_name, Lazy<std::shared_ptr<Base>>([](){ return std::make_shared<English>();    }) },
-	{ Ukrainian ::c_name, Lazy<std::shared_ptr<Base>>([](){ return std::make_shared<Ukrainian>();  }) },	
+	{ Russian ::c_name, Lazy<std::shared_ptr<Base>>([](){ return std::make_shared<Russian>();  }) },	
 	{ Polish    ::c_name, Lazy<std::shared_ptr<Base>>([](){ return std::make_shared<Polish>();     }) },
 	{ German    ::c_name, Lazy<std::shared_ptr<Base>>([](){ return std::make_shared<German>();     }) },
 	{ French    ::c_name, Lazy<std::shared_ptr<Base>>([](){ return std::make_shared<French>();     }) },

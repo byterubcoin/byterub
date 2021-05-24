@@ -72,7 +72,7 @@ CREATE_SUBDIRS         = YES
 # Greek, Hungarian, Italian, Japanese, Japanese-en (Japanese with English 
 # messages), Korean, Korean-en, Lithuanian, Norwegian, Macedonian, Persian, 
 # Polish, Portuguese, Romanian, Russian, Serbian, Serbian-Cyrillic, Slovak, 
-# Slovene, Spanish, Swedish, Ukrainian, and Vietnamese.
+# Slovene, Spanish, Swedish, Russian, and Vietnamese.
 
 OUTPUT_LANGUAGE        = English
 
