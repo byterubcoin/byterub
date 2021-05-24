@@ -1,19 +1,19 @@
-// Copyright (c) 2017-2018, Karbo developers
+// Copyright (c) 2017-2018, BTR developers
 //
-// This file is part of Karbo.
+// This file is part of BTR.
 //
-// Karbo is free software: you can redistribute it and/or modify
+// BTR is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// Karbo is distributed in the hope that it will be useful,
+// BTR is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with Karbo. If not, see <http://www.gnu.org/licenses/>.
+// along with BTR. If not, see <http://www.gnu.org/licenses/>.
 
 #include <condition_variable>
 #include <future>
@@ -138,8 +138,8 @@ namespace Common {
 bool processServerAliasResponse(const std::string& s, std::string& address) {
   try {
     // Courtesy of Monero Project
-    // make sure the txt record has "oa1:krb" and find it
-    auto pos = s.find("oa1:krb");
+    // make sure the txt record has "oa1:btr" and find it
+    auto pos = s.find("oa1:btr");
     if (pos == std::string::npos)
       return false;
     // search from there to find "recipient_address="

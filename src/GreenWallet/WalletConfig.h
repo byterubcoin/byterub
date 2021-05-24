@@ -1,5 +1,5 @@
 // Copyright (c) 2018, The TurtleCoin Developers
-// Copyright (c) 2018-2019, The Karbo Developers
+// Copyright (c) 2018-2019, The BTR Developers
 // 
 // Please see the included LICENSE file for more information.
 
@@ -14,7 +14,7 @@ namespace WalletConfig
     const std::string addressPrefix = "K";
 
     /* Your coins 'Ticker', e.g. Monero = XMR, Bitcoin = BTC */
-    const std::string ticker = "KRB";
+    const std::string ticker = "BTR";
 
     /* The filename to output the CSV to in save_csv */
     const std::string csvFilename = "transactions.csv";
@@ -24,7 +24,7 @@ namespace WalletConfig
     const std::string addressBookFilename = ".addressBook.json";
 
     /* The name of your deamon */
-    const std::string daemonName = "karbowanecd";
+    const std::string daemonName = "byterubd";
 
     /* The name to call this wallet */
     const std::string walletName = "GreenWallet";
@@ -33,10 +33,10 @@ namespace WalletConfig
     const std::string walletdName = "walletd";
 
     /* The full name of your crypto */
-    const std::string coinName = "Karbo";
+    const std::string coinName = "BTR";
 
     /* Where can your users contact you for support? E.g. discord */
-    const std::string contactLink = "https://t.me/karbowanec";
+    const std::string contactLink = "https://t.me/byterub";
 
     /* The number of decimals your coin has */
     const int numDecimalPlaces = CryptoNote::parameters

@@ -3,22 +3,22 @@
 // Copyright (c) 2014-2018, The Forknote developers
 // Copyright (c) 2018, Ryo Currency Project
 // Copyright (c) 2018-2019, The TurtleCoin developers
-// Copyright (c) 2016-2020, The Karbo developers
+// Copyright (c) 2016-2020, The BTR developers
 //
-// This file is part of Karbo.
+// This file is part of BTR.
 //
-// Karbo is free software: you can redistribute it and/or modify
+// BTR is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// Karbo is distributed in the hope that it will be useful,
+// BTR is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with Karbo.  If not, see <http://www.gnu.org/licenses/>.
+// along with BTR.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
@@ -127,9 +127,9 @@ const char     CRYPTONOTE_BLOCKCHAIN_INDICES_FILENAME[]      = "blockchainindice
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "karbowanec";
+const char     CRYPTONOTE_NAME[]                             = "byterub";
 const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001fac484c69cd608029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101f904925cc23f86f9f3565188862275dc556a9bdfb6aec22c5aca7f0177c45ba8";
-const char     DNS_CHECKPOINTS_HOST[]                        = "checkpoints.karbo.org";
+const char     DNS_CHECKPOINTS_HOST[]                        = "checkpoints.btr.org";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
@@ -194,11 +194,11 @@ const uint32_t P2P_IDLE_CONNECTION_KILL_INTERVAL             = (5 * 60);      //
 const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "8f80f9a5a434a9f1510d13336228debfee9c918ce505efe225d8c94d045fa115";
 
 const char* const SEED_NODES[] = { 
-  "seed1.karbowanec.com:32347",
-  "seed2.karbowanec.com:32347",
-  "seed.karbo.cloud:32347",
-  "seed.karbo.org:32347",
-  "seed.karbo.io:32347",
+  "seed1.byterub.com:32347",
+  "seed2.byterub.com:32347",
+  "seed.btr.cloud:32347",
+  "seed.btr.org:32347",
+  "seed.btr.io:32347",
   "185.86.78.40:32347",
   "108.61.198.115:32347",
   "45.32.232.11:32347",

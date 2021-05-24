@@ -1,10 +1,10 @@
-![Build check](https://github.com/seredat/karbowanec/workflows/Build%20check/badge.svg)
+![Build check]((https://github.com/byterubcoin/byterub/workflows/Build%20check/badge.svg))
 
-Karbo is people's electronic cash, a cryptocurrency, just like Bitcoin but Ukrainian and anonymous thanks to Cryptonote technology. The key principle of CryptoNote is adaptive parameters. Karbo already has adaptive block size limit and adaptive difficulty, which we improved, and which ensures it's stable emission rate and thus makes Karbo sound money. In addition in Karbo was implemented adaptive fee to keep transaction costs stable regardless of karbo price.
+BTR is people's electronic cash, a cryptocurrency, just like Bitcoin but Ukrainian and anonymous thanks to Cryptonote technology. The key principle of CryptoNote is adaptive parameters. BTR already has adaptive block size limit and adaptive difficulty, which we improved, and which ensures it's stable emission rate and thus makes BTR sound money. In addition in BTR was implemented adaptive fee to keep transaction costs stable regardless of btr price.
 
-**HARDFORK V4 IS SET AT HEIGHT 266000!!!** In this hardfork _we introduce adaptive minimal transaction fee_ as first step towards our goal. Information for exchanges and other services how to work with new fees: https://github.com/seredat/karbowanec/wiki/Dynamic-transaction-minimum-fee
+**HARDFORK V4 IS SET AT HEIGHT 266000!!!** In this hardfork _we introduce adaptive minimal transaction fee_ as first step towards our goal. Information for exchanges and other services how to work with new fees: https://github.com/byterubcoin/byterub/wiki/Dynamic-transaction-minimum-fee
 
-Pools operating **'cryptonote-forknote-pool'** or compatible software should update Node-Cryptonote-Util to this version: https://github.com/aivve/node-cryptonote-util. The reference pool software is here: https://github.com/Karbovanets/karbo-pool.
+Pools operating **'cryptonote-forknote-pool'** or compatible software should update Node-Cryptonote-Util to this version: https://github.com/aivve/node-cryptonote-util. The reference pool software is here: https://github.com/byterubcoin/btr-pool.
 
 Pools operating **'cryptonote-nodejs-pool'** should _change config on hardfork height_. The changes in config are:
 ```
@@ -13,11 +13,11 @@ Pools operating **'cryptonote-nodejs-pool'** should _change config on hardfork h
 "cnVariant": 0,
 "cnBlobType": 0,
 ```
-The example of Karbo config is here: https://github.com/Karbovanets/cryptonote-nodejs-pool/blob/master/config_examples/karbo.json
+The example of BTR config is here: https://github.com/byterubcoin/cryptonote-nodejs-pool/blob/master/config_examples/btr.json
 
 
 
-## Building Karbo 
+## Building BTR 
 
 ### On *nix
 
@@ -39,8 +39,8 @@ Run these commands:
 ```
 cd ~
 sudo apt-get install build-essential git cmake libboost-all-dev
-git clone https://github.com/seredat/karbowanec.git
-cd karbowanec
+git clone https://github.com/byterubcoin/byterub.git
+cd byterub
 mkdir build
 cd build
 cmake ..
@@ -86,8 +86,8 @@ For the other we recommand you to use [Homebrew](https://brew.sh)
 Continue with:
 ```
 brew install git cmake boost
-git clone https://github.com/seredat/karbowanec.git
-cd karbowanec
+git clone https://github.com/byterubcoin/byterub.git
+cd byterub
 cd build
 cmake ..
 make
@@ -117,7 +117,7 @@ export PATH=/opt/android/tool32/arm-linux-androideabi/bin:/opt/android/tool32/bi
 ./b2 abi=aapcs architecture=arm binary-format=elf address-model=32 link=static runtime-link=static --with-chrono --with-date_time --with-filesystem --with-program_options --with-regex --with-serialization --with-system --with-thread --with-context --with-coroutine --with-atomic --build-dir=android32 --stagedir=android32 toolset=clang threading=multi threadapi=pthread target-os=android --reconfigure stage
 ```
 
-Build Karbo for 32 bit Android
+Build BTR for 32 bit Android
 ```
 mkdir -p build/release.android32
 cd build/release.android32

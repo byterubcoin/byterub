@@ -1,5 +1,5 @@
 // Copyright (c) 2018, The TurtleCoin Developers
-// Copyright (c) 2018-2019, The Karbo Developers
+// Copyright (c) 2018-2019, The BTR Developers
 // 
 // Please see the included LICENSE file for more information.
 
@@ -1073,8 +1073,8 @@ bool processServerAliasResponse(const std::string& s, std::string& address)
 {
     try {
         // Courtesy of Monero Project
-        // make sure the txt record has "oa1:krb" and find it
-        auto pos = s.find("oa1:krb");
+        // make sure the txt record has "oa1:btr" and find it
+        auto pos = s.find("oa1:btr");
         if (pos == std::string::npos)
             return false;
 

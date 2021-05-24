@@ -1,0 +1,17 @@
+[Unit]
+Description=ByteRub BTR service
+After=network.target
+
+[Service]
+Type=oneshot
+User=btr
+Group=btr
+PermissionsStartOnly=true
+RemainAfterExit=yes
+ExecStartPre=-/bin/mkdir -p /var/run/btr
+ExecStartPre=/bin/chown -R btr:btr /var/run/btr/
+ExecStart=/usr/lib/btr/btrd.sh --start
+ExecStop=/usr/lib/btr/btrd.sh --stop
+
+[Install]
+WantedBy=multi-user.target

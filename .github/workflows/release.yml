@@ -22,12 +22,12 @@ jobs:
         id: build
         run: |
           $build_folder = "build"
-          $krb_ver = "${{ github.ref }}" -replace 'refs/tags/'
-          $release_name = "Karbo-cli-win64-$krb_ver"
+          $btr_ver = "${{ github.ref }}" -replace 'refs/tags/'
+          $release_name = "BTR-cli-win64-$btr_ver"
           mkdir "$build_folder"
           cd "$build_folder"
           cmake -G "Visual Studio 16 2019" -A x64 -DBOOST_ROOT="$env:BOOST_ROOT_1_72_0" ..
-          msbuild Karbowanec.sln /p:Configuration=Release /m
+          msbuild ByteRub.sln /p:Configuration=Release /m
           cd src\Release
           Compress-Archive -Path *.exe -DestinationPath "$release_name.zip"
           $sha256 = (Get-FileHash "$release_name.zip").Hash
@@ -35,13 +35,13 @@ jobs:
           echo "::set-output name=sha256::${sha256}"
           echo "::set-output name=release_name::${release_name}.zip"
           echo "::set-output name=asset_path::${asset_path}"
-          echo "::set-output name=krb_ver::${krb_ver}"
+          echo "::set-output name=btr_ver::${btr_ver}"
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           files: ${{ steps.build.outputs.asset_path }}
-          name: Karbo CLI Suite ${{ steps.build.outputs.krb_ver }}
+          name: BTR CLI Suite ${{ steps.build.outputs.btr_ver }}
           body: |
             **${{ steps.build.outputs.release_name }}**
             ${{ steps.build.outputs.sha256 }}
@@ -60,8 +60,8 @@ jobs:
         id: build
         run: |
           build_folder="build/"
-          krb_ver=$(echo ${{ github.ref }} | sed 's|refs/tags/||')
-          release_name="Karbo-cli-macOS-$krb_ver"
+          btr_ver=$(echo ${{ github.ref }} | sed 's|refs/tags/||')
+          release_name="BTR-cli-macOS-$btr_ver"
           brew install --force boost gcc
           brew link boost --force
           mkdir "$build_folder"
@@ -79,13 +79,13 @@ jobs:
           echo "::set-output name=sha256::${sha256}"
           echo "::set-output name=release_name::${release_name}.zip"
           echo "::set-output name=asset_path::${asset_path}"
-          echo "::set-output name=krb_ver::${krb_ver}"
+          echo "::set-output name=btr_ver::${btr_ver}"
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           files: ${{ steps.build.outputs.asset_path }}
-          name: Karbo CLI Suite ${{ steps.build.outputs.krb_ver }}
+          name: BTR CLI Suite ${{ steps.build.outputs.btr_ver }}
           body: |
             **${{ steps.build.outputs.release_name }}**
             ${{ steps.build.outputs.sha256 }}
@@ -105,8 +105,8 @@ jobs:
         run: |
           sudo apt install -y libboost-all-dev
           build_folder="build/release"
-          krb_ver=$(echo "$GITHUB_REF" | sed 's|refs/tags/||')
-          release_name=Karbo-cli-ubuntu20.04-"$krb_ver"
+          btr_ver=$(echo "$GITHUB_REF" | sed 's|refs/tags/||')
+          release_name=BTR-cli-ubuntu20.04-"$btr_ver"
           mkdir -p "$build_folder"
           cd "$build_folder"
           cmake -D ARCH=default -D CMAKE_BUILD_TYPE=Release -D CMAKE_POSITION_INDEPENDENT_CODE:BOOL=true -D BOOST_IGNORE_SYSTEM_PATHS_DEFAULT=ON -D BOOST_ROOT=/usr ../..
@@ -123,13 +123,13 @@ jobs:
           echo "::set-output name=sha256::${sha256}"
           echo "::set-output name=release_name::${release_name}.tar.gz"
           echo "::set-output name=asset_path::${asset_path}"
-          echo "::set-output name=krb_ver::${krb_ver}"
+          echo "::set-output name=btr_ver::${btr_ver}"
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           files: ${{ steps.build.outputs.asset_path }}
-          name: Karbo CLI Suite ${{ steps.build.outputs.krb_ver }}
+          name: BTR CLI Suite ${{ steps.build.outputs.btr_ver }}
           body: |
             **${{ steps.build.outputs.release_name }}**
             ${{ steps.build.outputs.sha256 }}
@@ -150,8 +150,8 @@ jobs:
           sudo apt-get purge '*boost*'
           sudo apt install -y libboost1.62-all-dev
           build_folder="build/release"
-          krb_ver=$(echo "$GITHUB_REF" | sed 's|refs/tags/||')
-          release_name=Karbo-cli-ubuntu18.04-"$krb_ver"
+          btr_ver=$(echo "$GITHUB_REF" | sed 's|refs/tags/||')
+          release_name=BTR-cli-ubuntu18.04-"$btr_ver"
           mkdir -p "$build_folder"
           cd "$build_folder"
           cmake -D ARCH=default -D CMAKE_BUILD_TYPE=Release -D CMAKE_POSITION_INDEPENDENT_CODE:BOOL=true -D BOOST_IGNORE_SYSTEM_PATHS_DEFAULT=ON -D BOOST_ROOT=/usr ../..
@@ -168,13 +168,13 @@ jobs:
           echo "::set-output name=sha256::${sha256}"
           echo "::set-output name=release_name::${release_name}.tar.gz"
           echo "::set-output name=asset_path::${asset_path}"
-          echo "::set-output name=krb_ver::${krb_ver}"
+          echo "::set-output name=btr_ver::${btr_ver}"
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           files: ${{ steps.build.outputs.asset_path }}
-          name: Karbo CLI Suite ${{ steps.build.outputs.krb_ver }}
+          name: BTR CLI Suite ${{ steps.build.outputs.btr_ver }}
           body: |
             **${{ steps.build.outputs.release_name }}**
             ${{ steps.build.outputs.sha256 }}

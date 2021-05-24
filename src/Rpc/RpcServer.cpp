@@ -1,22 +1,22 @@
 // Copyright (c) 2012-2016, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2016, The Forknote developers
-// Copyright (c) 2016-2020, The Karbo developers
+// Copyright (c) 2016-2020, The BTR developers
 //
-// This file is part of Karbo.
+// This file is part of BTR.
 //
-// Karbo is free software: you can redistribute it and/or modify
+// BTR is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// Karbo is distributed in the hope that it will be useful,
+// BTR is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with Karbo.  If not, see <http://www.gnu.org/licenses/>.
+// along with BTR.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "RpcServer.h"
 #include "version.h"
@@ -513,7 +513,7 @@ bool RpcServer::checkIncomingTransactionForFee(const BinaryArray& tx_blob) {
   if (amount < m_fee_amount)
     return false;
 
-  logger(Logging::INFO) << "Masternode received relayed transaction fee: " << m_core.currency().formatAmount(amount) << " KRB";
+  logger(Logging::INFO) << "Masternode received relayed transaction fee: " << m_core.currency().formatAmount(amount) << " BTR";
 
   return true;
 }
@@ -1113,7 +1113,7 @@ bool RpcServer::on_get_index(const COMMAND_HTTP::request& req, COMMAND_HTTP::res
 <g>
 <circle fill="#0AACFC" cx="1250000" cy="1250000" r="1214062" />
 <path fill="#FFED00" d="M1251219 1162750c18009,-3203 34019,-10006 48025,-20412 14009,-10407 27215,-28016 39622,-52029l275750 -538290c10803,-18010 24012,-32419 39218,-43625 15210,-10806 33219,-16410 53232,-16410l174893 0 -343384 633144c-15209,26016 -32419,47228 -51628,63635 -19613,16409 -41225,28815 -64838,37221 36822,9604 67638,25213 92854,47225 24812,21610 48425,52025 70437,91247l330578 668363 -192503 0c-38822,0 -70041,-21213 -93653,-63235l-270947 -566303c-14006,-25215 -29216,-43225 -45622,-54034 -16409,-10803 -37222,-17206 -62034,-18809l0 287359 -151281 0 0 -288559 -111263 0 0 703581 -213716 0 0 -1540835 213716 0 0 673166 111263 0 0 -332981 151281 0 0 330581z"/>
-</g></svg></svg></td><td>)" "karbowanec" R"(d &bull; version 
+</g></svg></svg></td><td>)" "byterub" R"(d &bull; version 
 )";
   const std::string index_finish = " </p></body></html>";
   const std::time_t uptime = std::time(nullptr) - m_core.getStartTime();
